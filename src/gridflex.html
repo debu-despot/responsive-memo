@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+	<script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+</head>
+<body>
+	
+	<div id="content">
+		<input type="button" class="btn btn-primary" value="vanilla" id="vanilla">	
+		<input type="button" class="btn btn-primary" value="grid" id="grid">
+		<input type="button" class="btn btn-primary" value="flexbox" id="flexbox">	
+	</div>
+</body>
+<link rel="stylesheet" href="./scss/gridflex.scss">
+<script src="./ts/gridflex.ts"></script>
+<script>
+	new ScrollHint('.js-scrollable');
+</script>
+</html>

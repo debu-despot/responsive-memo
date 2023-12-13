@@ -1,0 +1,109 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body{
+	background-color: black;
+}
+
+#content{
+	background-color: white;
+
+	&.absolute{
+		width: 800px;
+		#pain{
+			width: 245px;
+		}
+		#main{
+			width: 550px;
+		}
+	}
+	&.liquid{
+		width: 100vw;
+		white-space: nowrap;
+		#pain{
+			width: 31%;
+			overflow: hidden;
+			white-space: normal;
+			word-break: break-all;
+
+		}
+		#main{
+			width: 68%;
+			padding: 0px;
+		}
+	}
+
+	&.adaptive{
+		//320,480,760,960,1200,1600
+		@media screen and (max-width:479px) {
+			width: 320px;
+			#pain{
+				position:sticky;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+			#main{
+				border: none;
+				width: 315px;
+			}
+		}
+		@media screen and (min-width:480px) {
+			width: 480px;
+			#pain{
+				width: 130px;
+			}
+			#main{
+				width: 345px;
+			}
+		}
+		@media screen and (min-width:960px) {
+			width: 960px;
+			#pain{
+				width: 180px;
+			}
+			#main{
+				width: 775px;
+			}
+		}
+	}
+	&.responsive{
+		#pain{
+			position:sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+		
+		@media screen and (min-width:480px) {
+			display: grid;
+			grid-template-columns: 15rem 1fr;
+			#pain{
+				display: inline-block;
+			}
+		}
+
+		@media screen and (min-width:960px) {
+			#main{
+				max-width: calc(960px - 15rem);
+			}
+		}
+
+	}
+
+
+	#pain{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	#main{
+		display: inline-block;
+		vertical-align: top;
+		border-left: solid black 2px;
+		padding-left:1rem ;
+		padding-right:1rem ;
+		pre{
+			white-space: pre-wrap ;
+		}
+	}
+}

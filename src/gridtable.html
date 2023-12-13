@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div id="content">
+		<table id="table" class="vanilla"></table>
+		<div id="grid"></div>
+		<div class="res-table">
+			<table id="scroll" class="scroll js-scrollable"></table>
+		</div>
+		<p>ふったー</p>
+	</div>
+</body>
+<link rel="stylesheet" href="./scss/table.scss">
+<script src="./ts/table.ts"></script>
+<link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+<script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+<script>
+	new ScrollHint('.js-scrollable');
+</script>
+</html>

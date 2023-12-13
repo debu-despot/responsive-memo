@@ -1,0 +1,31 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+#content{
+	&.flexbox{
+		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		align-content: space-around;
+		align-self: center;
+	}
+
+	&.grid{
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 10rem);
+		justify-items: center;
+		align-items: center;
+	}
+
+	input{
+		display: inline-block;
+		height: 5rem;
+	}
+
+	.item{
+		display: inline-block;
+		background-color: red;
+		border: solid black 2px;
+
+	}
+}
